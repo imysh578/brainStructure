@@ -9,7 +9,7 @@
 p.s. 현재 서버를 닫은 관계로 실행이 되지 않습니다
 
 --  
-<img width="700" alt="스크린샷 2021-11-05" src="https://user-images.githubusercontent.com/89692626/143542856-7d008fc9-d4bf-4808-8338-e09d3744500a.png">
+<img width="1100" alt="스크린샷 2021-11-05" src="https://user-images.githubusercontent.com/89692626/143542856-7d008fc9-d4bf-4808-8338-e09d3744500a.png">
 
 ---
 
