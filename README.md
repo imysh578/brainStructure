@@ -20,6 +20,7 @@ Member.
 이민주:[깃허브](https://github.com/codecocos)  
 이소윤:[깃허브](https://github.com/jsoyun)
 
+
 # 목차
 
 [1.개요](#개요)
@@ -42,249 +43,257 @@ Member.
 
 ### 개요
 
-탄소 감축을 위한 인증 SNS 플랫폼
+음식에 진심인 한국인들을 대상으로 강동구 맛집리스트 사이트를 만들고자 했고 기존 맛집사이트와 차별화가 필요하다.
 
 ### 목적
 
-> 탄소 감축을 위한 인증 SNS 플랫폼
->
-> 1. SNS 기능 활성화
-> 2. 프로젝트 경험
-> 3. 블록체인 기반 암호화폐로 대체될 포인트제도 숙달
+강동구 음식 맛집을 카테고리화하여 모아볼 수 있게 하는 웹사이트
+
+> 1. HTML5, CSS, JavaScript 활용한 웹페이지 구성
+> 2. 로그인 후 찜 기능 활성화
+> 3. 팀 프로젝트 경험
+> 4. 오픈 API 데이터 불러오기 및 활용
 
 - **기존 서비스와의 차별점**
+  - 강동구 한정 맛집 서비스 제공
+  - 난수를 활용한 랜덤한 맛집 추천
+  - 카카오 API를 이용한 로그인 및 지도 서비스
+  - 최근 검색 목록을 모달창에 나열
+  - 강동구에 등록된 업체 목록의 중복 제거
 
-  - 커뮤니티 서비스 제공
-  - 경제적 유인을 통해 환경보호에 동참하게끔 하는 인증 SNS 플랫폼
-
-### 전체 소스 코드 [소스](https://github.com/buymesushi/BUYMESUSHI.git)
+### 전체 소스 코드 [소스](https://github.com/imysh578/brainStructure.git)
 
 # 디렉토리 설명
 
-전체 코드 : [코드](https://github.com/buymesushi/BUYMESUSHI.git)
+전체 코드 : [코드](https://github.com/imysh578/brainStructure.git)
 
     - 폴더 설명
-    BUYMESUSHI
+    BrainStructure
     |
-    |--node_modules         - 모듈
-    |--client               - Front 폴더
-    |   |--node_modules     - 모듈
-    |   |--public           - Front 정적 폴더
-    |   |   |--img          - Front 정적 이미지 폴더
-    |   |--src              - source 폴더
-    |   |   |--actions      - 액션 메서드 모음 폴더
-    |   |   |--components   - 컴포넌트 폴더
-    |   |   |   |--views    - 각종 컴포넌트 모음 폴더
-    |   |   |--hoc          - 권환 관리 모음 폴더
-    |   |   |--reducers     - 리듀서 모음 폴더
-    |   |   |--redux        - 상태관리 폴더
-    |   |--App.js           - 컴포넌트 모음
-    |   |--index.js         - 진입 파일
-    |   |--setupProxy.js    - 프록시 설정
+    |--.vscode              - 포트 번호
+    |--images               - 아이콘 등 이미지 폴더
+    |--scripts              - 
+        |--cookies.js       - 쿠키값 저장 및 불러오기 기능
+        |--headers.js       - 상단바(검색, 로그인, 최근검색목록, 내 리뷰 목록)
+        |--main.js          - 메인페이지(맛집 추천, 카테고리 링크, 식당 추천)
+        |--review_list.js   - 내 리뷰 목록(가입된 사용자에게만 권한 부여)
+        |--review_write.js  - 리뷰 작성(날짜 입력, 맛집 점수 기능)
+        |--search.js        - 강동구 음식점 API (중복 제거), 카카오 지도 API 활용
+    |--styles               - CSS 모음
+    |--videos               - 메인페이지 애니메이션 파일
     |
-    |--server               - Backend 폴더
-        |--config           - 각종 환경 설정 관리 폴더
-        |--controller       - Req, Res 담당 폴더
-        |--data             - seed 데이터 초기 값 관리 폴더
-        |--middleware       - 각종 미들웨어
-        |--models           - 데이터베이스의 각 컬렉션에 해당하는 파일들 모음
-        |--routes           - 각종 라우터 모음
-        |
-        |--index.js         - 진입 파일
+    |--create.html               - 게시판(리뷰) 글 작성 페이지
+    |--index.html                - 메인페이지 
+    |--map custom.html           - 카카오 지도 API 페이지
+    |--process_create.php        - 게시판 글 작성 과정
+    |--review_list.html          - 게시판(리뷰) 리스트 페이지
+    |--search.html               - 검색 결과 페이지
+
+    
 
 ### 사용한 기술
 
-- 웹 화면 구성 : `React` `CSS` `styled-components` `JavaScript XML`
-- 데이터 요청 및 출력 : `Ajax` `JSON` `axios`
-- DB 액션 처리 : `Mongoose`
-- DBMS : `MongoDB`
-- 개발 Tool : `Visual Studio Code` `PostMan`
-- 날씨 Api : `openweathermap API`
-- 프레임워크 : `Express` `NodeJs`
-- 프로젝트 관리 Tool : `GitHub` `Google Drive`
-
-- 사용 모듈(server) :  
-  "bcrypt": "^5.0.1",  
-  "body-parser": "^1.19.0",  
-  "concurrently": "^6.3.0",  
-  "cookie-parser": "^1.4.5",  
-  "cors": "^2.8.5",  
-  "express": "^4.17.1",  
-  "fs": "^0.0.1-security",  
-  "jsonwebtoken": "^8.5.1",  
-  "jwt-decode": "^3.1.2",  
-  "jwt-token": "^1.0.9",  
-  "mongo-seeding": "^3.7.0",  
-  "mongoose": "^6.0.12",  
-  "mongoose-sequence": "^5.3.1",  
-  "multer": "^1.4.3",  
-  "path": "^0.12.7"
-
-- 사용 모듈(client) :  
-  "@material-ui  
-  "@mui  
-  "@nivo/core": "^0.74.0",  
-  "@nivo/line": "^0.74.0",  
-  "@testing-library  
-  "@toast-ui/editor-plugin-code-syntax-highlight": "^3.0.0",  
-  "@toast-ui/editor-plugin-color-syntax": "^3.0.2",  
-  "@toast-ui/react-editor": "^3.1.1",  
-  "axios": "^0.24.0",  
-  "bulma": "^0.9.3",  
-  "chart.js": "^3.6.0",  
-  "eslint-plugin-import": "^2.25.2",  
-  "http-proxy-middleware": "^2.0.1",  
-  "mobx": "^6.3.7",  
-  "moment": "^2.29.1",  
-  "observer": "0.0.2",  
-  "prismjs": "^1.25.0",  
-  "prop-types": "^15.7.2",  
-  "react": "^17.0.2",  
-  "react-chartjs-2": "^3.2.0",  
-  "react-modal": "^3.14.3",  
-  "react-pretty-carousel": "^1.0.19",  
-  "react-redux": "^7.2.6",  
-  "react-router-dom": "^5.3.0",  
-  "react-slick": "^0.28.1",  
-  "react-spring": "^9.3.0",  
-  "redux": "^4.1.2",  
-  "redux-promise": "^0.6.0",  
-  "redux-thunk": "^2.4.0",  
-  "slick-carousel": "^1.8.1",  
-  "styled-components": "^5.3.3",  
-  "swiper": "^7.2.0",  
-  "web-vitals": "^1.0.1",  
-  "webpack": "4.44.2",
+- 웹 화면 구성 : `Html` `CSS` `JavaScript`
+- 데이터 요청 및 출력 : `Ajax` `JSON` `fetch`
+- DB 액션 처리 : `php`
+- DBMS : `MariaDB`
+- 개발 Tool : `Visual Studio Code`
+- 카카오 지도 Api : `kakao API`
+- 강동구 음식점 Api : `강동구 음식점 API`
+- 프로젝트 관리 Tool : `GitHub` `Google Drive` `Webex`
 
 ### 주요 기능
 
-- 메인페이지 : `MUI` `styled-components` `modal` `react-slick` `API` `chartjs`
-- 로그인 : 일반 로그인, `mongoose` `JWT` `redux` `Token` `bcrypt`
-- 회원가입 : `mongoose` `nodeJS` `bcrypt` `validation`
-- 소개 : `MUI` `styled-components` `react-scroll` `react-scroll-slider` `Custom Hook`
-- 지키미인증 : `mongoose` `multer` `redux` `axios`
-- 포인트사용 : `mongoose` `redux` `axios`
-- 미니게임 : `Vanilla JS`
-- 게시판 : `mongoose` `express` `axios` `modal`
-- 마이페이지 : `mongoose` `redux` `axios`
+- 메인페이지 : `HTML5` `CSS` `JavaScript` `API`
+- 로그인 : 카카오 로그인, `HTML5` `CSS` `JavaScript` `API`
+- 음식점 검색 : `HTML5` `CSS` `JavaScript` `API`
+- 음식점 렌덤 추천 : `HTML5` `CSS` `JavaScript` `API`
+- 음식점 카테고리 검색 : `HTML5` `CSS` `JavaScript` `API` 
+- 리뷰게시판 : `php` `mysqli` 
+- 최근 검색 목록 : `JavaScript`
 
 # 발생한 이슈 & 해결 방법
 
-### "리덕스와 db 연결의 어려움 - ## 이소윤 "
+### "api배열과 함수 사용의 어려움- ## 이소윤 "
 
-- 리덕스,id값 전송 시 수량 값 추가하기
+- html과 css틀잡기
 
-[상황] 미숙한 redux 사용으로 기존 스토어를 통한 상태값과 함수 주입에 어려움을 겪었다.
+[상황] 검색 페이지를 맡아 음식리스트가 뜨는 부분과 지도가 뜨는 부분을 나눴다.
 
-[문제] 리덕스를 사용해 장바구니에 쇼핑목록값을 저장하고 데이터관계설정으로 User에 products를 추가하였음에도 db연결을 하지 못해 모든
-회원의 마이페이지 내용이 동일하였다.
+[문제] html과 css 틀을 잡는데 어려움을 느꼈다.
 
-[해결] 쇼핑카트에서 마이페이지로 선택한 products들의 data를 넘겨주도록
-하였다. 기존 data에 수량까지 추가해 mypage라우터로 axios.put으로 넘겨주었다.
-마이페이지 라우터에서 현재 유저의 아이디에 해당하면 정해진 db설정에 맞게 $push해 주었다.
+[해결] 그리드를 사용해 틀을 나눴다.
 
-- 객체값으로 묶어보낸 값을 updateOne와 $pull을 사용해 삭제하기
+- 맛집리스트 api 정보부르기(중복도출 피하기)
 
-[상황] 장바구니에 추가한 상품들을 선택해 삭제하려고 하였다.
+[상황] 메인 페이지에서 검색어를 입력하면 쿠키로 넘겨 검색이 되게 하였다. 
 
-[문제] 삭제가 되지 않거나 하나의 상품만 선택하여도 모든 products 값이 삭제되었다.
+[문제] 음식api 배열이 깔끔하지 않아 검색리스트로 부르는데 많은 어려움을 겪었다. 특히 검색이 된다고 해도 업소명이 중복되어 검색되어나왔다.
 
-[해결] 선택한 상품만 삭제되도록 선택한 상품의 id를 axios.post로 먼저 보내주었다.
-id는 숫자 string값이라 {productId:id}로 객체값으로 묶어 보냈다. 마찬가지로 현재 유저의
-아이디에 해당하고, 요청한 productId와 동일하면 Spull을 통해 삭제하도록 했다.
+[해결]  배열이름을 확인하고 list로 데이터의 구체적 배열을 할당해주었다. 중복을 제거하고 업소명을 담아둘 리스트를 따로, 그곳에 포함되지 않은 이름이면 push하도록 했다. for문을 사용해 보여줄 정보에 이름을 붙였다.
 
-### "react 이해 부족 - ## 최현석 "
+- 카카오지도 맛집추천 링크마크 넣기
 
-- 상태관리 useState useEffect redux
+[상황] 카카오지도 api를 불러오면서 특정 음식점들의 링크를 지도안에 마크로 넣어주고자 했다.
 
-[상황] 초반 redux 사용(user). 이후 useState, useEffect 주로 사용
+[문제] 한번 마크를 넣을 때마다 코드가 추가되었는데 링크로 넘어가는 모두 같은 역할을 하고 있었지만 지도상 위치값이 달라서 통일하지 못해 쓸데없이 코드가 길어졌다.
 
-[문제] redux값 useState에 대입, 렌더링 전 state값 undefined로 출력됨
+[해결]  마커를 표시할 위치와 이름,링크주소를 하나의 position 객체 배열에 모두 담았다. 해당하는 값을 찾아 마크 이름과 링크를 연결했다. 이로써 코드 길이를 줄일 수 있었다.  
 
-[해결] if문 사용하여 undefined시 return null, state 값 있을 시 해당 부분 렌더링
 
-- 이미지 업로드
 
-[상황] 이미지 업로드 시 fakepath 경로 오류
+### " Cookie 사용 및  - ## 윤석훈 "
 
-[문제] chrome에서는 보안문제 때문에 로컬 전체 경로를 알지 못하게 하는 보안 기능이 있음
+- 로그인 상태에 따른 페이지 변환
 
-[해결] URL.createObjectURL 메소드 사용
+[상황] 로그인 상태에 따라 사용자 프로필 삽입 및 최근 검색 목록 데이터를 보여주어야함.
 
-- 몽고디비 seeder 생성
+[문제] 페이지가 새로 랜더링 될 때마다 로그인 데이터가 사라짐.
 
-[상황] 초기 데이터 생성 위하여 seed Data 설정
+[해결] Logined 상태 변수를 Cookie에 담아서 로그인 상태를 체크, 그에 따라 다른 페이지 보여줌.
 
-[문제] 암호생성을 위하여 bcrypt 사용. 해당 데이터 Object(<promise>)로 출력
 
-[해결] 프로젝트 진행을 위하여 암호화 된 문자열 직접 입력 ( 추후 해결 필요 )
+- 싱글페이지로 로그인/비로그인 화면 띄우기
 
-- react if문 사용
+[상황] 페이지 랜더링 없이 로그인/비로그인 상태에 따른 화면을 띄우려고 함.
 
-[상황] react render 안에서 if문 사용
+[문제] 각각의 html 파일을 만들면 공통된 코드가 반복 됨.
 
-[문제] render안에서 if문 사용 불가
+[해결] Cookie 값을 활용하여 컴포넌트의 hidden 속성을 바꿔줌.
 
-[해결] render 밖에서 if문 사용 또는 삼항연산자 사용
 
-### "proxy 연결 - ## 최현석"
+- 모달 창 구현
 
-- route 연결 proxy
+[상황] 로그인 / 최근 검색 목록 / 내 리뷰 목록 을 모달 창으로 구현하려고 함.
 
-[상황] 라우터 연결 시 연결 오류
+[문제] 모달 창을 새로운 html로 만들면 매번 랜더링 되는 문제 발생
 
-[문제] [HPM] Error occurred while proxying request 에러 발생
+[해결] 하나의 html 안에 모달 창 div를 만들고 z-index를 상위로 올려줌.
 
-[해결] client와 server 연결 시 RESTful API 지켜줘야함
 
-### "기본 css개념의 중요성과 React - ## 김혜린"
+- Input 태그 안에 Button 태그 넣기
 
-[상황] 팀플 후반 프런트와 백엔드 깃 병합 과정에서 css 충돌
+[상황] 상단 바의 Input 태그 안에 Button 태그를 넣음.
 
-[문제1] 메인디자인이 프론트 브랜치에서 보는거랑 백에서 보는거랑 달라져
-시간은 부족하고 그러다보니 병합과정에서 약간의 팀원들과의 의견충돌
+[문제] Input 태그의 border 라인과 Button의 border 사이에 빈 공간이 생김.
 
-[해결] 프런트 파트에서 각 파트에서 진행하고 styled-components를 사용중임을 정확히 설명하고
-팀원들과 리액트 컴포넌트 스타일링 방식에서 전역으로 들어가 충돌이 일어나지 않도록 했어야 햇는데
-그렇지 못해서 하나하나 나중에 다시 수정해나아갔다.
-다음 팀플 진행시 css 부분을 간과하지 말아야 함을 많은 시간을 쏟으며 배움.
+[해결] box-shadow를 주어 빈 공간을 처리함.
 
-### "React 활용 미숙 - ## 이성재"
 
-- 모듈 활용 미숙, 커스터마이징 방식
 
-[상황1] 유효성을 검사하는 함수를 만들어 MUI 를 따온 input에 프론트 단에서 어떻게 유효성 검사를 할 수 있을지 고민되었다.
+### "DB 사용에 미숙 - ## 이민주"
 
-[문제1] MUI 컴포넌트와 유효성 검사를 합치하는데 boolean 값이 헷갈렸다.
+- 휘발되지 않는 정보의 필요성에 의한 게시글 DB 생성
 
-[해결1] MUI의 error 시 적용되는 css와 validation 함수를 합쳐 주어진 유효식과 다른 text가 입력되면 MUI에서도 error로 작성되게하였다.
+[상황] 사용자의 음식점에 대한 리뷰가 DB에 축적되어 타 사용자에게 노출될 수 있도록 하여야 하지만
+DB가 없어서 작성된 리뷰글이 휘발되는 상황
 
-[상황2] chart-js 적용하는 방식에서 OpenAPI 자료를 원하는 방식으로 정리해서 x축, y축에 띄우고 싶었다.
+[문제] DB에 저장된 글을 PHP으로 활용하기 위해서는 create 명령어를 정확히 사용하여야 했으나,
+create 조건 인지의 미숙으로 생성에 실패
 
-[문제2] grenn-gas emission api의 년도별 배출량이 하나의 객체 안에 다 들어가 있었다.
+[해결] input 태그의 name 부분을 DB 테이블의 필드명과 일치 시켜줌으로써 해결.
 
-[해결2] 증가되는 추세를 보여주기 위해 chart로 보여주고 싶었으므로 하나의 나라의 배출량만을 불러와서 년도별 배출량을 표시했다.
+-  외부 접속을 위한 server 이용
 
-- 모달을 활용한 data 주고받기
+[상황] 홈페이지 개발 상황에서는 localhost로 접속만으로 충분하였으나, 사용자들의 리뷰를 수집하기 위해서는 외부접속이 가능해야함.
 
-[상황] : 게시글 리스트, 게시글 작성, 상세 게시글을 한 페이지에서 모달만을 활용하여 데이터를 주고 받아야 했다.
+[문제] localhost를 통한 홈페이지 접속만이 가능함. 이 외에는 홈페이지에 접급할 수 있는 방법이 없음.
 
-[문제] : 각각의 page가 있는 것이 아니어서 cannot post/ boardwrite에러가 뜨는 등 route에서 경로 설정해주는게 혼란스럽고 세부 게시글을 불러오는 방식도 헷갈렸다.
+[해결] bitnami wamp를 활용하여 server 이용을 위한 환경셋팅 후 외부 접속이 가능하게 함.   
 
-[해결] : input마다 value를 주고 route에서 경로만 설정해주면서 post 방식으로 데이터를 전달했고, 상세 게시글에서는 게시글 리스트에서 props로 상위 컴포넌트의 데이터를 받아왔다.
 
-- 훅 활용 및 리덕스, 스토어의 활용 미숙
+### "API 활용과 웹디자인 미숙 - ## 이성재"
 
-[상황] : 반복되는 같은 styled-component나 함수가 필요한 파일마다 들어가 있었다.
+- axios 없이 fetch 함수만으로 데이터를 불러오기
 
-[문제] : 코드가 길어지면서 가독성이 떨어지고 리덕스의 효능을 제대로 누리지 못했다.
+[상황] 강동구 맛집 API를 불러와야 하는데 axios 없이 fetch 함수(GET 방식)로 API를 불러와야 했다.
 
-[해결] : 스토어로 바꿀 수 있는 부분은 바꿔보고 props로 그나마 코드를 줄였다. (추가 보완 필요)
+[문제] API를 다뤄본 적이 없다보니 기본적으로 데이터를 불러오는 방법조차 모르고 promise에 대해서도 미숙해 데이터값을 불러오기 힘들었다.
 
-- 개발 과정에서 DB 삭제하면서 일어나는 유저 관련 issue
+[해결] 주석을 달면서 천천히 로직을 생각하며 then 메서드를 활용해 필요한 정보들을 다뤄볼 수 있었다.
 
-[상황] : 게시판에서 작성한 유저 nickname 띄우는게 갑자기 안 됐다.
+- 검색 프로세스처럼 클릭했을 때 페이지 이동(1)
 
-[문제] : 유저 DB가 사라지면 게시판에 nickname을 불러올 수가 없어서 게시판이 오류가 났다.
+[상황] : 오늘의 추천 식당을 눌렀을 때 해당 식당 정보를 가진 페이지로 넘겨줘야 했다.
 
-[해결] : 소통의 문제였으므로 공유하고 있는 db에 대해 변화를 줄 때는 서로 소통하기로 하였다.
+[문제] : 세가지 식당이 뜨게 하면서도 그 세개가 겹치지 않는 난수로 for문에 들어가야 하고 검색 프로세스와 같이 쿠키에 저장까지 해야해서 로직이 헷갈렸다.
+
+[해결] : addEventLister 메서드와 setCookie 메서드를 통해 클릭했을 때 검색화면으로 넘어가게 하였다.
+
+- 검색 프로세스처럼 클릭했을 때 페이지 이동(2)
+
+[상황] : 카테고리를 눌렀을 때 그 카테고리에 해당하는 식당들을 모두 띄워줘야 했다.
+
+[문제] : 만들고 싶은 카테고리가 있었으나 API의 카테고리에는 정해진 카테고리가 있었기에 괴리감이 생겼다.
+
+[해결] : 이름까지 똑같이 해서 API에 맞춘 카테고리를 만들었으나 지금 다시 한다면 내가 만든 카테고리에 맞춰 클릭했을 때 원하는 식당들이 뜰 수 있게 할 것 같다. 그리고 또한 API 활용을 메인으로 하는 사이트에서는 API 의 데이터 질이 굉장히 중요하다는 것을 느꼈다.
+
+- 메인 컨텐츠의 비율 분할 및 배정
+
+[상황] : flex가 아닌 grid로 카테고리나 추천식당의 자리를 만들고 싶었다.
+
+[문제] : grid 활용의 미숙과 padding과 margin에 대한 이해 부족으로 인해 원하는 곳에 배정의 어려움을 겪었다.
+
+[해결] : mozilla 문서와 padding, margin을 활용한 다른 사이트를 참고해 개념을 다시 숙지한 후 재배치했다.
+
+- 메인페이지 디자인
+
+[상황] : 유저에게 첫인상을 주는 메인페이지를 디자인해야 했다.
+
+[문제] : 웹페이지 디자인 자체가 처음이라 우리만의 아이덴티티를 어떻게 보여줄지, 그리고 헤더와 메인컨텐츠의 비율이 고민되었다.
+
+[해결] : 맛집 소개 페이지인만큼 메인페이지에 음식 관련 애니메이션을 크게 띄우고 추천 음식 하나만을 보여주고 다른 색은 통일하면서 심플하지만 임팩트 있게 만들어 보려 했다.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+---아래 예시처럼 적어도 좋음---
+
+### 페이지별 설명(views-html)   
+## main :   
+<img width="500" alt="KakaoTalk_20211017_155220801" src="https://user-images.githubusercontent.com/89692626/137615265-9ad9ddb3-b1d6-4db4-bdb6-f2149972f03c.png">
+<img width="500" alt="KakaoTalk_20211017_155218347" src="https://user-images.githubusercontent.com/89692626/137615273-95e3f65a-1164-441f-ac89-3f3542a194f2.png">   
+
+메인페이지입니다 풀스크린방식을 채용했으며 2페이지로 나눠서 제작했습니다   
+1페이지같은경우는 무한슬라이드방식으로 이미지가 우에서 좌로 흘러가는형태로 제작했으며   
+백그라운드 HOLIDAY 세일부분은 백그라운드이미지를 Z-INDEX를 줘서 해상도에따른 변화를 잡아줬습니다   
+
+<img width="500" alt="KakaoTalk_20211017_155218347" src="https://user-images.githubusercontent.com/89692626/137615345-4e4a92e5-1c7b-4268-b977-5571b5c23497.png">
+
+넌적스의 extends 형식으로 블록형태로 잡아둔후 작업한 페이지입니다  
+저희가 리엑트를 배우기전 마지막으로쓸거같은 템플릿엔진이기에 최대한 많은부분을 활용해보고싶었습니다 페이지이동식은  
+extends로 블록을잡아서 작업하였고  
+
+<img width="500" alt="KakaoTalk_20211017_155218347" src="https://user-images.githubusercontent.com/89692626/137615352-e36c765b-5200-4258-8306-83da5bf6c4c5.png">   
+
+include 방식입니다 해당html파일의 소스의 요소를 영역에 집어넣어 작업하였습니다  
+
+<img width="172" alt="KakaoTalk_20211017_155727405" src="https://user-images.githubusercontent.com/89692626/137615422-0ed93abb-4870-485c-9070-72e82848ea4d.png">   
+Socket.io 를 사용하여 접속자끼리의 실시간 채팅을만들었습니다 마찬가지로 include 방식을 사용하였습니다 
+
+<img width="361" alt="3" src="https://user-images.githubusercontent.com/89692626/137615827-c3b77f28-3216-4a4b-9163-93e9c337a1a6.png">
+<img width="500" alt="" src="https://user-images.githubusercontent.com/89692626/137615821-08abdf2e-32d1-421a-b38e-1b0539e8535d.png">
+
+관리자와의 채팅이가능한 라이브러리입니다 "깃플" 이며 상담요청시 해당 상담사가 1:1매칭되어 채팅기록,db에서 사용자를 불러서  
+어떤사용자가 시간표시와함께 어떠한 문의를 남겼는지 따로 저장이가능하며 어떠한상담사가 상담했는지도 표시가됩니다  
+해당 라이브러리에는 상담요청이왔을때 카톡으로 알림이오는것도있어서 매우 편리하다 판단되어 사용해봤습니다  
+   
+## join :    
+<img width="1133" alt="KakaoTalk_20211017_155846026" src="https://user-images.githubusercontent.com/89692626/137615487-14824b09-a5c0-4588-aeb9-65cf9e11a997.png">   
+회원가입 페이지입니다 scss와 gif방식을사용하여 쇼케이스형식으로 왼쪽에는 이미지(GIF)와 음악이 재생이됩니다  
+음악같은경우 크롬정책상 autoplay방식이 불가능한데  
+오픈소스인 howl 을 사용하여 사용자가 헤더에있는 "회원가입" 버튼을 클릭했을시 사용자가 음악을 재생하는걸 동의하는걸로 간주하도록 제작하여  
+회원가입페이지에 들어왔을때 자동으로 음악이 재생되도록 설정하였고 왼쪽하단엔 음악을 끄고 키는 기능을 넣었습니다  
+<img width="500" alt="KakaoTalk_20211017_160205029" src="https://user-images.githubusercontent.com/89692626/137615680-b3adccde-f3f7-4179-bb99-24159d6414b0.png">회원가입하는 과정에서 유저의 정보를 담는다. 가입시 입력하는 email값이 unique로 중복이 안되게 하였고 비밀번호는 12자리의 해쉬값으로 저장하고 이미지는 변환된 url값으로 저장한다.
+<img width="500" alt="KakaoTalk_20211017_160215296" src="https://user-images.githubusercontent.com/89692626/137615638-d9c36e30-2816-46b4-b8e1-084fc5a800f6.png">
+회원가입하는 유저들의 profile img들을 담아 저장할 폴더를 만든다. multer를 통해 img를 profile img에 저장할 수 있게 하고 img 파일은 url 값으로 변환한다.
+<img width="500" alt="KakaoTalk_20211017_160202804" src="https://user-images.githubusercontent.com/89692626/137615615-6990152d-b8ae-4fe8-b5f2-2176442aa8e1.png">    
+login에는 passport에 넣어준 로그인 권한을 유지할 수 있게 하는 방법을 local과 kakao로 저장한다.
+    
+## login :  
+<img width="500" alt="KakaoTalk_20211017_160529161" src="https://user-images.githubusercontent.com/89692626/137615748-7cd43437-9eaf-4d75-9412-ac5f205757fe.png">   
+<img width="393" alt="1" src="https://user-images.githubusercontent.com/89692626/137615766-aa64fd48-cf60-4750-91ab-ad5a16be19e9.png">   
+serializeUser와 deserailizeUser를 통해 로그인할 수 있게 해준다.
+<img width="602" alt="2" src="https://user-images.githubusercontent.com/89692626/137615784-ec660a00-550b-460c-8a6c-e60582821ad0.png">  
+이메일과 비밀번호값을 이용해 user의 정보와 맞는지 비교한다. 비밀번호가 일치하는지 알아보는 과정에서는 bcrypt 모듈을 사용했다.
+  
