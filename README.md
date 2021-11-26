@@ -1,8 +1,8 @@
-# 프로젝트팀명 : BUYMESUSHI
+# 프로젝트팀명 : BrainStructure
 
-## 🌡🌏 BUYMESUSHI('회사조') - 탄소 감축을 위한 인증 SNS 플랫폼
+## 🧠BrainStructure('뇌구조') - 강동구 맛집 추천 웹사이트
 
-## 프로젝트 시작일 : 2021-11-05
+## 프로젝트 기간 : 2021-08-31 ~ 2021-09-08
 
 ## [**서비스로 이동**](http://주소 미정/)
 
@@ -16,8 +16,8 @@ p.s. 현재 서버를 닫은 관계로 실행이 되지 않습니다
 Member.
 
 이성재:[깃허브](https://github.com/seongjae-Leee)  
-최현석:[깃허브](https://github.com/Hyerin1208)  
-김혜린:[깃허브](https://github.com/Tozinoo)  
+윤석훈:[깃허브](https://github.com/imysh578)  
+이민주:[깃허브](https://github.com/codecocos)  
 이소윤:[깃허브](https://github.com/jsoyun)
 
 # 목차
